@@ -12,7 +12,7 @@ function Footer() {
                     <div className={styles.miniColumn}>
                         <Link to={'/'} className={styles.h1}>SimplyCyber</Link>
                         <div className={styles.text}><img src={require('../../assets/loc.png')} className={styles.icon} /> United States</div>
-                        <div className={styles.text}><img src={require('../../assets/email.png')} className={styles.icon} /> support@simplycyber.com</div>
+                        <div className={styles.text}><img src={require('../../assets/email.png')} className={styles.icon} /> simplycyber@gmail.com</div>
                         <div className={styles.text}><img src={require('../../assets/phone.png')} className={styles.icon} /> +1-910-321-8215</div>
                     </div>
                     <div className={styles.copyright}>© 2023 SimplyCyber LLC</div>
