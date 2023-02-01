@@ -1,0 +1,423 @@
+.header {
+    position: relative;
+    padding-top: 8em;
+    padding-bottom: 5em;
+    height: 30em;
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+    background: url(../assets/solutions.png);
+    background-size: cover;
+}
+
+/* Header */
+.headerFlex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header text */
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    max-width: 35em;
+}
+
+.headerH1 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: .5em;
+    color: rgba(245, 245, 245, 0.993);
+}
+
+.headerH2 {
+    color: rgba(245, 245, 245, 0.993);
+    margin-bottom: .5em;
+}
+
+.headerPara {
+    margin-bottom: 2.5em;
+    color: rgba(245, 245, 245, 0.993);
+    line-height: 1.7em;
+}
+
+.headerButtons {
+    display: flex;
+    column-gap: 1em;
+}
+
+.button2 {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium';
+    color: rgba(245, 245, 245, 0.993);
+    background: linear-gradient(90deg, var(--swatch6) 0%, var(--swatch7) 100%);
+    letter-spacing: .1em;
+    font-size: .9em;
+    text-transform: uppercase;
+    border-radius: 5em;
+    padding: 2em;
+    padding-top: .8em;
+    padding-bottom: .8em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .2s;
+}
+
+.button1:hover,
+.button2:hover,
+.linkButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
+/* Content */
+
+.column {}
+
+.logoImage {
+    width: 80%;
+}
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.section2 {
+    padding-top: 5em;
+    padding-bottom: 0em;
+}
+
+.fill {
+    opacity: 1;
+    width: 33%;
+    min-width: 30em;
+    max-width: 30em;
+}
+
+/* First Section */
+
+.sectionH2 {
+    font-size: 1.2em;
+    color: var(--text);
+}
+
+.sectionH1 {
+    max-width: 20em;
+}
+
+.sectionTextBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.sectionText {
+    color: #8f8f8f;
+    max-width: 40em;
+    line-height: 1.5em;
+}
+
+.buttonFlex {
+    display: flex;
+}
+
+.unorderedList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.listItem {
+    display: flex;
+    column-gap: .5em;
+    flex-direction: row;
+    align-items: center;
+    height: 2.2em;
+}
+
+.textIcon {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.LiText {
+    font-weight: bold;
+    color: #333333;
+    max-width: 45em;
+}
+
+.linkButton {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium';
+    color: rgba(245, 245, 245, 0.993);
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+    letter-spacing: .1em;
+    font-size: .9em;
+    border-radius: 5em;
+    padding: 2em;
+    padding-top: .8em;
+    padding-bottom: .8em;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .3s;
+}
+
+/* Wave */
+
+.wave {
+    position: absolute;
+    min-width: 100em;
+    width: 100%;
+    height: 50px;
+    bottom: -.1em;
+    left: 0;
+    background-size: contain;
+    background-image: url(../assets/wave2.png);
+    filter: drop-shadow(0 -.3em .5em #00000062);
+    z-index: 1;
+}
+
+.content {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2em;
+}
+
+.more {
+    padding: 2em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.moreH1 {
+    font-size: 1.1em;
+    color: #c0bfbf;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.more::before {
+    content: '';
+    position: absolute;
+    width: 41%;
+    height: 1px;
+    left: 2em;
+    background-color: #c0bfbf;
+}
+
+.more::after {
+    content: '';
+    position: absolute;
+    width: 41%;
+    height: 1px;
+    right: 2em;
+    background-color: #c0bfbf;
+}
+
+.moreRow {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 3em;
+    margin-top: 8em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 5em;
+}
+
+.finalBackground {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7em;
+    padding-bottom: 1em;
+}
+
+.final {
+    display: flex;
+    height: 15em;
+    max-width: 60em;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 6em;
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.finalImgBox {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 3em;
+    margin-right: 2em;
+}
+
+.finalImg {
+    width: 12em;
+}
+
+.finalFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.finalText {
+    font-size: 1.5em;
+    color: #5c5c5c;
+}
+
+.finalTextColor {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.h2 {
+    font-size: 1.2em;
+    color: var(--text);
+}
+
+.h1 {
+    max-width: 20em;
+}
+
+.floatingText {
+    color: #7e7e7e;
+    max-width: 40em;
+    line-height: 1.5em;
+}
+
+.floatingContainer {
+    background-color: rgb(245, 245, 245);
+}
+
+.build {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linkBox {
+    display: flex;
+}
+
+.linkButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    font-family: 'Franklin Gothic Medium';
+    color: rgba(245, 245, 245, 0.993);
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+    letter-spacing: .1em;
+    font-size: .9em;
+    text-decoration: none;
+    border-radius: 5em;
+    padding: 2em;
+    padding-top: .8em;
+    padding-bottom: .8em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .3s;
+}
+
+.linkButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
+.pattern {
+    width: 33%;
+    background-color: rgb(0, 110, 255);
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Header */
+    .headerFlex {
+        width: 95vw;
+    }
+
+    .screenBox {
+        font-size: .7em;
+    }
+
+    .headerText {
+        padding-right: 2em;
+        padding-left: 1em;
+    }
+
+    .fill {
+        display: none;
+    }
+
+    .column {
+        width: 90vw;
+        padding-left: 5vw
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .screenBox {
+        display: none;
+    }
+
+    .headerFlex {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .moreRow {
+        font-size: .8em;
+    }
+
+    .finalBackground {
+        font-size: .5em;
+    }
+
+    .headerText {
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .moreRow {
+        font-size: .6em;
+    }
+}

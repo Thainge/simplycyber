@@ -1,0 +1,60 @@
+.moreColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+    max-width: 20em;
+}
+
+.moreButton {
+    max-width: 9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium';
+    color: rgba(245, 245, 245, 0.993);
+    letter-spacing: .1em;
+    font-size: .9em;
+    text-transform: uppercase;
+    border-radius: 5em;
+    padding-right: 1.5em;
+    padding-left: .4em;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    transition: all .3s;
+}
+
+.moreButton:hover {
+    cursor: pointer;
+}
+
+.moreButton1 {
+    background: linear-gradient(90deg, var(--swatch4) 00%, var(--swatch5) 100%);
+}
+
+.moreButton2 {
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+}
+
+.moreButton3 {
+    background: linear-gradient(90deg, #5bfd68 0%, rgb(38, 189, 0) 100%);
+}
+
+.buttonText {
+    font-size: 1.1em;
+    margin-left: .4em;
+}
+
+.img {
+    width: 2em;
+}
+
+.moreH2 {
+    font-size: 1.3em;
+    margin-bottom: .5em;
+}
+
+.moreText {
+    font-size: 1.1em;
+    color: #a0a0a0;
+    line-height: 1.7em;
+}

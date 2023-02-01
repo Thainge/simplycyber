@@ -1,0 +1,111 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: .3em;
+    padding-bottom: 3em;
+    padding-top: 1em;
+    max-width: 30em;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.cardH1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.cardH2 {
+    font-family: 'Franklin Gothic';
+    font-weight: 100;
+    max-width: 17em;
+    font-size: 1.05em;
+    color: var(--text3)
+}
+
+.list {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    row-gap: .6em;
+}
+
+.listItem {}
+
+.button {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium';
+    color: rgba(245, 245, 245, 0.993);
+    background: linear-gradient(90deg, var(--swatch4) 0%, var(--swatch5) 100%);
+    letter-spacing: .1em;
+    font-size: .95em;
+    text-transform: uppercase;
+    border-radius: 5em;
+    padding: 1.9em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .3s;
+}
+
+.button:hover {
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
+/* First card */
+
+.firstCard {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    position: relative;
+    z-index: 2;
+    max-height: 28em;
+    margin-top: -1em;
+}
+
+/* Second card */
+
+.secondCard {
+    position: relative;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 2.5em;
+    margin-left: -4em;
+}
+
+.secondH1 {
+    font-size: 1.3em;
+    font-family: unset;
+    font-weight: 100;
+}
+
+.secondH2 {
+    margin: 0;
+    color: var(--text);
+}
+
+.cost {
+    margin: 0;
+    margin-top: .4em;
+    color: var(--text2);
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.button2 {
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+}
+
+@media screen and (max-width: 648px) {
+    .secondCard {
+        margin: 0;
+    }
+}

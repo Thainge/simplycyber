@@ -1,0 +1,48 @@
+.row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 2em;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.rowTitle {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #505050;
+}
+
+.rowList {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.rowItem {
+    color: #8d8d8d;
+    width: 29.5%;
+    font-size: 1.4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first {
+    margin-left: 3em;
+}
+
+.second {
+    margin-left: 3.6em;
+}
+
+.extra {
+    color: #b8b8b8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: .9em;
+}

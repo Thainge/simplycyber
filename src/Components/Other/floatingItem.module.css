@@ -1,0 +1,111 @@
+.floatingObject {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    animation: floatRight 5s infinite alternate ease-in-out;
+    transition: scale .3s;
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10em;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@keyframes floatRight {
+    0% {
+        transform: translateX(0em);
+    }
+
+    50% {
+        transform: translateX(1em);
+    }
+}
+
+@keyframes floatLeft {
+    0% {
+        transform: translateX(0em);
+    }
+
+    50% {
+        transform: translateX(-1em);
+    }
+}
+
+.image {
+    width: 5em;
+    height: 5em;
+}
+
+.floatingObject:hover {
+    scale: 1.1;
+}
+
+.floatingObject1 {
+    left: 9%;
+    top: 0;
+    margin-top: 10%;
+    animation: floatLeft 5s infinite alternate ease-in-out;
+}
+
+.floatingObject2 {
+    right: 10%;
+    top: 0;
+    animation: floatLeft 5s infinite alternate ease-in-out;
+    margin-top: 17%;
+}
+
+.floatingObject3 {
+    left: 24%;
+    top: 0;
+    margin-top: 40%;
+}
+
+.floatingObject4 {
+    right: 8%;
+    top: 0;
+    margin-top: 75%;
+}
+
+.floatingObject5 {
+    left: 7%;
+    top: 0;
+    margin-top: 70%;
+    animation: floatLeft 5s infinite alternate ease-in-out;
+}
+
+.floatingObjectB1 {
+    right: 9%;
+    top: 0;
+    margin-top: 10%;
+    animation: floatLeft 5s infinite alternate ease-in-out;
+}
+
+.floatingObjectB2 {
+    left: 10%;
+    top: 0;
+    margin-top: 17%;
+    animation: floatLeft 5s infinite alternate ease-in-out;
+}
+
+.floatingObjectB3 {
+    right: 24%;
+    top: 0;
+    margin-top: 40%;
+}
+
+.floatingObjectB4 {
+    left: 8%;
+    top: 0;
+    margin-top: 75%;
+}
+
+.floatingObjectB5 {
+    right: 7%;
+    top: 0;
+    margin-top: 70%;
+    animation: floatLeft 5s infinite alternate ease-in-out;
+}

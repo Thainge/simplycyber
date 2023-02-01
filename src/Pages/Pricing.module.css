@@ -1,0 +1,160 @@
+.container {
+    padding-top: 6em;
+    position: relative;
+}
+
+.fill {
+    height: 50em;
+    margin-top: 5em;
+}
+
+.absoluteBG {
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    position: absolute;
+    top: -5vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.headerH1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: .03em;
+    font-size: 2em;
+    margin-bottom: .3em;
+    color: white;
+}
+
+.headerH2 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: .03em;
+    font-size: 2em;
+    color: rgba(220, 220, 220, .99);
+    margin-top: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    font-size: 1.1em;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin-top: 6em;
+    position: relative;
+    z-index: 2;
+}
+
+.rowHeader {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(245, 245, 245);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding-left: 2em;
+}
+
+.rowHeaderCol {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+}
+
+.rowHeaderH2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.firstH2 {
+    color: var(--text3);
+}
+
+.secondH2 {
+    color: var(--text);
+}
+
+.rowHeaderText {
+    color: #a3a3a3;
+    font-size: 1.1em;
+    max-width: 40em;
+    line-height: 1.5em;
+}
+
+.rowHeaderButton {
+    max-width: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: rgba(245, 245, 245, 0.993);
+    letter-spacing: .1em;
+    text-decoration: none;
+    font-size: .9em;
+    border-radius: .5em;
+    padding: 1em;
+    padding-top: .7em;
+    padding-bottom: .7em;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .3s;
+}
+
+.button1 {
+    background: linear-gradient(90deg, var(--swatch4) 0%, var(--swatch5) 100%);
+}
+
+.button2 {
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+}
+
+.rowHeaderButton:hover {
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 7px 20px, rgba(0, 0, 0, 0.23) 0px 5px 6px;
+    cursor: pointer;
+}
+
+.listHeader {
+    margin-top: 2em;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding-bottom: .3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    margin-bottom: -1px;
+}
+
+@media screen and (max-width: 778px) {
+    .container {
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .container {
+        font-size: .75em;
+    }
+
+    .header {
+        margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4em;
+    }
+}

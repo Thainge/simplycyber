@@ -1,0 +1,11 @@
+.fadeImg {
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    display: block;
+    width: 102%;
+    height: 102%;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}

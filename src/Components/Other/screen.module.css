@@ -1,0 +1,372 @@
+/* Computer */
+
+.monitor {
+    height: 24em;
+    width: 27em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screenContainer {
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(125deg, rgb(235, 235, 235) 55%, rgb(255, 255, 255) 55%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -8px 15px, rgba(0, 0, 0, 0.12) 0px -12px 15px, rgba(0, 0, 0, 0.12) 0px -2px 3px, rgba(0, 0, 0, 0.17) 0px -2px 5px, rgba(0, 0, 0, 0.09) 0px 3px 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.screen {
+    position: relative;
+    overflow: hidden;
+    background: rgb(0, 99, 255);
+    background: linear-gradient(0deg, var(--swatch1) 0%, var(--lightSwatch) 40%, var(--lightSwatch) 60%, var(--swatch1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 93%;
+    height: 86%;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.browser {
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 12.5%;
+    background-color: rgb(230, 230, 230);
+    border-radius: .3em;
+}
+
+.browser2 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 0;
+}
+
+.browserRelative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.browserTopLeft {
+    position: absolute;
+    top: .4em;
+    left: .4em;
+    display: flex;
+    column-gap: .3em;
+}
+
+.browserCircle {
+    height: .7em;
+    width: .7em;
+    border-radius: 10em;
+    background-color: grey;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    top: .4em;
+    left: .4em;
+    overflow: hidden;
+}
+
+.tab {
+    width: 4.84em;
+    height: 1em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all .3s;
+}
+
+.fadeTabIn {
+    z-index: 7;
+}
+
+.activeTabs {
+    z-index: 10;
+    animation: fadeTabs 1000ms;
+}
+
+@keyframes fadeTabs {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tabActive {
+    background-color: rgb(204, 204, 204);
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+}
+
+.contentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contentBox2 {
+    position: relative;
+    top: -10%;
+    z-index: 8;
+    animation: fadeTabs 1000ms;
+}
+
+.contentScreen {
+    position: absolute;
+    top: 15%;
+    width: 96.5%;
+    height: 81%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: .5em;
+    overflow: hidden;
+}
+
+.contentScreen2 {
+    top: 15%;
+    height: 85%;
+}
+
+.browserTabCircle {
+    height: .5em;
+    width: .5em;
+    border-radius: 10em;
+    background-color: rgb(170, 170, 170);
+    right: .6em;
+    position: absolute;
+}
+
+.soundTime {
+    display: flex;
+    width: 15%;
+    margin-right: .5em;
+}
+
+/* Bottom screen */
+
+.bottomScreen {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 4em;
+    border-bottom-left-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
+    background-color: rgb(212, 212, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 15px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.logoImage {
+    user-select: none;
+    -webkit-user-drag: none;
+    width: 2em;
+    filter: drop-shadow(0 .1em .4em rgba(0, 0, 0, 0.418))
+}
+
+.monitorBottom {
+    user-select: none;
+    -webkit-user-drag: none;
+    height: 21%;
+    filter: drop-shadow(0 .4em .3em rgba(0, 0, 0, 0.418))
+}
+
+.screenText {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: rgba(0, 0, 0, 0.993);
+}
+
+.screenActive {
+    position: relative;
+    z-index: 2;
+}
+
+.screenFade {
+    position: relative;
+    z-index: 0;
+}
+
+.contentImage {
+    width: 4em;
+}
+
+/* Second screen */
+
+.screen2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: rgb(223, 223, 223);
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(216, 216, 216);
+}
+
+.button:active {
+    background-color: rgb(199, 199, 199);
+}
+
+.absoluteOverlay {
+    z-index: 8;
+    position: absolute;
+    background: linear-gradient(0deg, var(--darkSwatch1) 0%, var(--darkSwatch2) 40%, var(--darkSwatch2) 60%, var(--darkSwatch1) 100%);
+    width: 200%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.overlayImageBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    padding: 1em;
+    background-color: rgba(156, 156, 156, 0.5);
+    border-radius: 10em;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+.overlayImage {
+    width: 3em;
+    height: 3em;
+}
+
+.fadeIn {
+    animation: fade 500ms;
+}
+
+.fadeOut {
+    animation: fade 500ms;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        scale: 2em;
+        opacity: 0;
+    }
+}
+
+.centerOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    row-gap: 1em;
+    animation: float 3s infinite alternate ease-in-out;
+}
+
+.centerOverlayImage {
+    width: 5em;
+    height: auto;
+}
+
+.centerOverlayText {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: rgba(245, 245, 245, 0.993);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-.5em);
+    }
+
+    100% {
+        transform: translateY(.5em);
+    }
+}
+
+.buttonScreen {
+    text-decoration: none;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium';
+    color: rgba(245, 245, 245, 0.993);
+    background: linear-gradient(90deg, var(--swatch3) 60%, var(--swatch1) 100%);
+    letter-spacing: .1em;
+    margin-top: .5em;
+    font-size: 1em;
+    padding: .5em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
+    transition: all .3s;
+}
+
+.buttonScreen:hover {
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
+    cursor: pointer;
+}
+
+.buttonImage {
+    width: 3em;
+}

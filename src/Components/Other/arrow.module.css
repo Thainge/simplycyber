@@ -1,0 +1,52 @@
+.arrowContainer {
+    width: 1em;
+}
+
+.arrow {
+    position: relative;
+    display: block;
+    width: 0;
+    height: .12em;
+    left: 1em;
+    top: .1em;
+    background-color: rgba(245, 245, 245, 0.993);
+    border-radius: 2em;
+    transition: all .2s;
+}
+
+.arrowActive {
+    width: .8em;
+    left: .5em;
+}
+
+.arrow::before {
+    content: '';
+    display: block;
+    height: .53em;
+    width: .13em;
+    position: absolute;
+    top: -.35em;
+    right: .01em;
+    border-radius: 2em;
+    border-bottom-left-radius: 0;
+    background-color: rgba(245, 245, 245, 0.993);
+    transform: rotate(-45deg);
+}
+
+.arrow::after {
+    content: '';
+    display: block;
+    height: .53em;
+    width: .13em;
+    position: absolute;
+    top: -.04em;
+    right: .01em;
+    border-radius: 2em;
+    border-top-left-radius: 0;
+    background-color: rgba(245, 245, 245, 0.993);
+    transform: rotate(45deg);
+}
+
+.extra {
+    margin-bottom: .1em;
+}

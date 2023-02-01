@@ -1,0 +1,490 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.papa {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 60em;
+}
+
+.h2 {
+    font-size: 1.2em;
+    color: var(--text);
+}
+
+.h1 {
+    max-width: 20em;
+    margin-bottom: 2em;
+}
+
+.stepTitle {
+    font-weight: bold;
+    color: #333333;
+    max-width: 45em;
+    margin-bottom: .5em;
+    position: relative;
+}
+
+.stepTitle::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 1em;
+    background-color: black;
+    left: -.8em
+}
+
+.text {
+    color: #7e7e7e;
+    line-height: 1.5em;
+    font-size: .9em;
+}
+
+.stepsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.miniRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 48%;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    max-width: 13em;
+}
+
+/* First animation */
+.stepAnimation1,
+.stepAnimation2,
+.stepAnimation3,
+.stepAnimation4 {
+    position: relative;
+    height: 4em;
+}
+
+.cog1 {
+    position: absolute;
+    top: 1em;
+    left: 1.3em;
+    width: 1.8em;
+    opacity: .7;
+    animation: rotateCogs2 3s infinite;
+}
+
+.cog2 {
+    position: absolute;
+    opacity: .7;
+    width: 2.2em;
+    animation: rotateCogs 3s infinite;
+}
+
+@keyframes rotateCogs2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotateCogs {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Second animation */
+
+.cirlceTriangleBox {
+    position: relative;
+    height: 2.3em;
+    width: 3em;
+    bottom: -.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Triangle containers */
+
+.triangleBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Circle containers */
+
+.circleBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.centerCircle {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-color: var(--primaryOpacity1);
+    border-radius: 10em;
+    opacity: 0;
+}
+
+.circles {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Triangle Children */
+
+.triangleChild {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-bottom: calc(2 * .5em * 0.866) solid var(--secondaryOpacity2);
+    border-top: .5em solid transparent;
+    display: inline-block;
+}
+
+.triangles div:nth-child(1) {
+    top: .18em;
+    left: .81em;
+    transform: rotate(150deg);
+}
+
+.triangles div:nth-child(2) {
+    top: .18em;
+    right: .82em;
+    transform: rotate(-150deg);
+}
+
+.triangles div:nth-child(3) {
+    transform: rotate(90deg);
+    /* top: .46em; */
+    /* left: .7em;
+    transform: translateY(-50%) rotate(90deg); */
+    transform: rotate(90deg) translate(0, -.4em);
+    position: relative;
+}
+
+.triangles div:nth-child(4) {
+    /* top: .46em; */
+    /* right: .71em;
+    transform: translateY(-50%) rotate(-90deg); */
+    transform: rotate(-90deg) translate(0, -.4em);
+    position: relative;
+}
+
+.triangles div:nth-child(5) {
+    bottom: -.4em;
+    left: .81em;
+    transform: rotate(150deg);
+}
+
+.triangles div:nth-child(6) {
+    bottom: -.4em;
+    right: .82em;
+    transform: rotate(-150deg);
+}
+
+/* Circle Children */
+
+.circleChild {
+    position: absolute;
+    width: .5em;
+    height: .5em;
+    background-color: var(--primaryOpacity2);
+    border-radius: 10em;
+}
+
+.circles div:nth-child(1) {
+    top: -.2em;
+}
+
+.circles div:nth-child(2) {
+    bottom: -.2em;
+}
+
+.circles div:nth-child(3) {
+    top: .3em;
+    right: .25em;
+}
+
+.circles div:nth-child(4) {
+    bottom: .3em;
+    right: .25em;
+}
+
+.circles div:nth-child(5) {
+    top: .3em;
+    left: .2em;
+}
+
+.circles div:nth-child(6) {
+    bottom: .3em;
+    left: .2em;
+}
+
+.triangleBoxAnimation {
+    width: 100%;
+    height: 100%;
+    animation: triangleMove 1.5s alternate, spinTriangle 1s alternate;
+}
+
+.triangleChildAnimation1 {
+    animation: middleMoveTriangle1 1.5s alternate;
+}
+
+.triangleChildAnimation2 {
+    animation: middleMoveTriangle2 1.5s alternate;
+}
+
+.circleBoxAnimation {
+    animation: circleAnimation 1.5s alternate;
+}
+
+.circleChildAnimation {
+    animation: circleFade 1.5s alternate;
+}
+
+.centerCircleAnimation {
+    animation: fadeCenterCircle 1.5s alternate;
+}
+
+@keyframes triangleMove {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+
+    50% {
+        width: 140%;
+        height: 200%;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes spinTriangle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes middleMoveTriangle1 {
+    0% {
+        transform: rotate(90deg) translate(0, -.4em);
+    }
+
+    50% {
+        transform: rotate(90deg) translate(0, .6em);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(0, -.4em);
+    }
+}
+
+@keyframes middleMoveTriangle2 {
+    0% {
+        transform: rotate(-90deg) translate(0, -.4em);
+    }
+
+    50% {
+        transform: rotate(-90deg) translate(0, .6em);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(0, -.4em);
+    }
+}
+
+@keyframes fadeCenterCircle {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes circleFade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes circleAnimation {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: .25;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+/* Third animation */
+
+.stepAnimation3 {}
+
+.boxContainer {
+    position: relative;
+    width: 2em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+    border-radius: .3em;
+    font-size: 1.2em;
+}
+
+.secondBoxes {
+    position: absolute;
+    left: -3em;
+    bottom: .6em;
+}
+
+.stepAnimation4 {}
+
+.stepCard {
+    top: .3em;
+    width: 3em;
+    height: 2em;
+    border-radius: .3em;
+    background-color: var(--primaryOpacity3);
+    position: relative;
+}
+
+.stepCircleContainer {
+    display: flex;
+    column-gap: .2em;
+    padding-top: .2em;
+    padding-left: .2em;
+}
+
+.cardCircle {
+    background-color: var(--secondaryOpacity1);
+    height: .3em;
+    width: .3em;
+    border-radius: 10em;
+}
+
+.step4Absolute {
+    width: .13em;
+    height: 3em;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: -.2em;
+    right: .6em;
+}
+
+@media screen and (max-width: 1050px) {
+    .stepsContainer {
+        justify-content: space-evenly;
+        max-width: 45em;
+        column-gap: 2em;
+    }
+
+    .miniRow {
+        flex-direction: column;
+        row-gap: 2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .miniRow {
+        row-gap: 1em;
+        max-width: 100%;
+    }
+
+    .step {
+        max-width: 100%;
+    }
+
+    .stepsContainer {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+}
