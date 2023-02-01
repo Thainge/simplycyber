@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import Home from '../Pages/Home';
@@ -10,14 +10,6 @@ import styles from './Router.module.css';
 import { Fade } from 'react-reveal';
 
 function RouterComponent() {
-    // let location = useLocation();
-
-    // if (location.pathname.includes('contact')) {
-    //     document.body.style.position = "fixed";
-    // } else {
-    //     document.body.style.position = "unset";
-    // }
-
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -32,7 +24,7 @@ function RouterComponent() {
                     <Link className={styles.navItem} to={'/contact'}>Contact</Link>
                 </ul>
                 <div className={styles.specialNav}>
-                    <Link className={styles.specialLink} to={''}>
+                    <Link className={styles.specialLink} to={'/'}>
                         SimplyCyber
                     </Link>
                 </div>

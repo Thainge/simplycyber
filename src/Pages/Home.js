@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 import Need from '../Components/Other/need';
 import Phone from '../Components/Other/phone';
 import Steps from '../Components/Other/steps';
@@ -18,7 +19,7 @@ function Home() {
                                 SimplyCyber provides businesses of all kinds and sizes with secure software solutions using the latest coding frameworks. We utilize modern approaches to designing smooth applications to solve business problems.
                             </div>
                             <div className={styles.headerButtons}>
-                                <div className={styles.button2}>Get started</div>
+                                <Link to={'/contact'} className={styles.button2}>Get started</Link>
                             </div>
                         </div>
                     </Fade>
@@ -67,7 +68,9 @@ function Home() {
                                     <div className={styles.LiText}>Smooth & responsive U/I</div>
                                 </li>
                             </ul>
-                            <button className={styles.linkButton}>Get Started</button>
+                            <div className={styles.linkBox}>
+                                <Link to={'/contact'} className={styles.linkButton}>Get Started</Link>
+                            </div>
                         </div>
                     </Fade>
                 </div>
@@ -104,8 +107,8 @@ function Home() {
                             <h2 className={styles.sectionH2}>Fast delivery</h2>
                             <h1 className={styles.sectionH1}>Deliver more quickly using automation and clean code</h1>
                             <div className={styles.sectionText}>Not only do we ensure that your application meets your requirements and aligns with your business solution, we also help you improve solutions as we see them. We provide valuble insight on speeding up the speed of your applications by prioritizing automation over manual.</div>
-                            <div>
-                                <button className={`${styles.linkButton} ${styles.section4Button}`}>Get Started</button>
+                            <div className={styles.linkBox}>
+                                <Link to={'/contact'} className={`${styles.linkButton} ${styles.section4Button}`}>Get Started</Link>
                             </div>
                         </div>
                     </Fade>
