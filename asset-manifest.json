@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/simplycyber/static/css/main.b47f5db9.css",
+    "main.js": "/simplycyber/static/js/main.4dbc4178.js",
+    "static/media/home.png": "/simplycyber/static/media/home.d6c24e17e9747ed7c821.png",
+    "static/media/about.png": "/simplycyber/static/media/about.9327ca572aa94a10fcda.png",
+    "static/media/maps.png": "/simplycyber/static/media/maps.3c60751640b03c33c609.png",
+    "static/media/1.png": "/simplycyber/static/media/1.146b61ac9d01c33b4b12.png",
+    "static/media/solutions.png": "/simplycyber/static/media/solutions.3923e54e7846db1940eb.png",
+    "static/media/picture.png": "/simplycyber/static/media/picture.9029f39120ef6489d9e1.png",
+    "static/media/background.png": "/simplycyber/static/media/background.21446df38d1c7779b451.png",
+    "static/media/2.png": "/simplycyber/static/media/2.6ecf925aca00ebc97445.png",
+    "static/media/3.png": "/simplycyber/static/media/3.a588a34400e3df238871.png",
+    "static/media/contactbg.png": "/simplycyber/static/media/contactbg.b0fee8b08083ecded88e.png",
+    "static/media/logo.png": "/simplycyber/static/media/logo.61dfba88c148e015988f.png",
+    "static/media/logoNoText.png": "/simplycyber/static/media/logoNoText.473170d004f4b9bade1c.png",
+    "static/media/logo1 - Copy - Copy.png": "/simplycyber/static/media/logo1 - Copy - Copy.75221825ed7fb3681bec.png",
+    "static/media/logo1 - Copy.png": "/simplycyber/static/media/logo1 - Copy.75221825ed7fb3681bec.png",
+    "static/media/logo1 - Copy - Copy (2).png": "/simplycyber/static/media/logo1 - Copy - Copy (2).e1eddcec6af5ae0a491e.png",
+    "static/media/map2.png": "/simplycyber/static/media/map2.5f4268840a4b6c18d810.png",
+    "static/media/logo - Copy (2).png": "/simplycyber/static/media/logo - Copy (2).dc5b7ad0dc888b017c13.png",
+    "static/media/logo - Copy.png": "/simplycyber/static/media/logo - Copy.dc5b7ad0dc888b017c13.png",
+    "static/media/wave2.png": "/simplycyber/static/media/wave2.a7f3f1885c91412a29ab.png",
+    "static/media/blue.png": "/simplycyber/static/media/blue.a3913d25921dcb474ced.png",
+    "static/media/green.png": "/simplycyber/static/media/green.a3913d25921dcb474ced.png",
+    "static/media/purple.png": "/simplycyber/static/media/purple.a3913d25921dcb474ced.png",
+    "static/media/wave.png": "/simplycyber/static/media/wave.34bc5e3a0e86095f85ae.png",
+    "index.html": "/simplycyber/index.html",
+    "main.b47f5db9.css.map": "/simplycyber/static/css/main.b47f5db9.css.map",
+    "main.4dbc4178.js.map": "/simplycyber/static/js/main.4dbc4178.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b47f5db9.css",
+    "static/js/main.4dbc4178.js"
+  ]
+}
