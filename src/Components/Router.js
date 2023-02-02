@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
@@ -10,7 +10,11 @@ import styles from './Router.module.css';
 import { Fade } from 'react-reveal';
 
 function RouterComponent() {
+    const ref = useRef();
+
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useOnClickOutside(ref, setMenuOpen);
 
     return (
         <>
@@ -29,7 +33,7 @@ function RouterComponent() {
                     </Link>
                 </div>
             </div>
-            <div className={styles.navMenu}>
+            <div className={styles.navMenu} ref={ref}>
                 <div onClick={() => setMenuOpen((prev) => !prev)} className={styles.imgBox}>
                     <img src={require('../assets/menu.png')} className={styles.menuIcon} />
                 </div>
@@ -44,6 +48,7 @@ function RouterComponent() {
                 </Fade>
             </div>
 
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/solutions" element={<Solutions />} />
@@ -54,6 +59,27 @@ function RouterComponent() {
 
             <Footer />
         </>
+    );
+}
+
+function useOnClickOutside(ref, handler) {
+    useEffect(
+        () => {
+            const listener = (event) => {
+                // Do nothing if clicking ref's element or descendent elements
+                if (!ref.current || ref.current.contains(event.target)) {
+                    return;
+                }
+                handler(() => false);
+            };
+            document.addEventListener("mousedown", listener);
+            document.addEventListener("touchstart", listener);
+            return () => {
+                document.removeEventListener("mousedown", listener);
+                document.removeEventListener("touchstart", listener);
+            };
+        },
+        [ref, handler]
     );
 }
 

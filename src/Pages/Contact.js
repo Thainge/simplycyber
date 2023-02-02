@@ -17,13 +17,22 @@ function Contact() {
 
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [selectedFile, setSelectedFile] = useState({ name: 'Max file size: 20MB' });
+    const [isFilePicked, setIsFilePicked] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formData = new FormData(e.target);
+
+        if (selectedFile.size) {
+            formData.append("File", selectedFile);
+        }
+
+        formData.append("formData", formValues);
 
         // Send to nodeJS server to send email
         setLoading(() => true);
-        sendEmail(formValues);
+        sendEmail(formData);
         setTimeout(() => {
             setSubmitted(() => true);
             setLoading(() => false);
@@ -39,6 +48,25 @@ function Contact() {
             return newData;
         });
     }
+
+    const fileHandler = (event) => {
+        let maxLength = 20 * 1000 * 1000;
+
+        if (event.target.files[0].size > maxLength) {
+            setSelectedFile(() => {
+                let newObj = { name: 'Max File Size' }
+                return newObj;
+            });
+        } else {
+            setSelectedFile(() => event.target.files[0]);
+
+            setIsFilePicked(() => true);
+
+            setTimeout(() => {
+                setIsFilePicked(() => false);
+            }, 1000)
+        }
+    };
 
     return (
         <div className={styles.container}>
@@ -78,18 +106,24 @@ function Contact() {
                     <div className={styles.row}>
                         <label className={styles.label}>
                             First Name*
-                            <input maxLength={20} required className={styles.input} onChange={handleChange} name='fname' type='text' placeholder='What is your first name?' />
+                            <input maxLength={20} required className={styles.input} onChange={handleChange} name='fname' type='text' />
                         </label>
                         <label className={styles.label}>
                             Last Name*
-                            <input maxLength={20} required className={styles.input} onChange={handleChange} name='lname' type='text' placeholder='What is your last name?' />
+                            <input maxLength={20} required className={styles.input} onChange={handleChange} name='lname' type='text' />
                         </label>
                     </div>
                     <div className={styles.row}>
                         <label className={styles.label}>
                             Email Address*
-                            <input maxLength={40} required className={styles.input} onChange={handleChange} name='email' type='text' placeholder='What is your email address?' />
+                            <input maxLength={40} required className={styles.input} onChange={handleChange} name='email' type='text' />
                         </label>
+                        <label className={styles.label}>
+                            Phone Number*
+                            <input maxLength={40} required className={styles.input} onChange={handleChange} name='phone' type='text' />
+                        </label>
+                    </div>
+                    <div className={styles.row}>
                         <div className={styles.selectBox}>
                             <select name='interest' className={styles.select} onChange={handleChange} defaultValue={'default'}>
                                 <option value={'default'} disabled> What are you interested in?</option>
@@ -99,16 +133,26 @@ function Contact() {
                                 <option>Other</option>
                             </select>
                         </div>
+                        <div className={styles.selectBox}>
+                            <select name='budget' className={styles.select} onChange={handleChange} defaultValue={'default'}>
+                                <option value={'default'} disabled>What's your budget?</option>
+                                <option>$0-$1000</option>
+                                <option>$1000 - $2500</option>
+                                <option>$2500 - $5000</option>
+                                <option>$5000 - $10000</option>
+                                <option>$10000 or more</option>
+                            </select>
+                        </div>
                     </div>
-                    <div className={styles.selectBox}>
-                        <select name='budget' className={styles.select} onChange={handleChange} defaultValue={'default'}>
-                            <option value={'default'} disabled>What's your budget?</option>
-                            <option>$0-$1000</option>
-                            <option>$1000 - $2500</option>
-                            <option>$2500 - $5000</option>
-                            <option>$5000 - $10000</option>
-                            <option>$10000 or more</option>
-                        </select>
+                    <div className={styles.fileInputBox}>
+                        <label className={`${styles.label} ${styles.inputLabel}`}>
+                            <input className={styles.fileInput} onChange={fileHandler} type='file' accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*" />
+                            <img className={styles.inputFileImg} src={require('../assets/inputFile.png')} />
+                            <div className={styles.fileButton}>Upload File</div>
+                        </label>
+                        <div className={styles.fileText}>
+                            {selectedFile.name}
+                        </div>
                     </div>
                     <label className={`${styles.label} ${styles.textAreaBox}`}>
                         Message:
@@ -118,7 +162,7 @@ function Contact() {
                             <i className={styles.messageEnd}>{500 - formValues.message.length} characters left</i>
                         </div>
                     </label>
-                    <button form='contact-form' className={`${styles.submit} ${submitted || loading ? styles.submitted : styles.nothing}`}>
+                    <button form='contact-form' className={`${styles.submit} ${isFilePicked ? styles.buttonLoading : styles.nothing} ${submitted || loading ? styles.submitted : styles.nothing}`}>
 
                         {submitted ? <div className={styles.submitBG} /> : <></>}
 
