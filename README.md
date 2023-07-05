@@ -1,8 +1,8 @@
 # SimplyCyber
 
-![alt text](https://github.com/Thainge/portfolio/blob/gh-pages/static/media/2.dc80357cb51840c25f72.png?raw=true)
-
 [SimplyCyber](https://simplycyberllc.com/#/)
+
+<img src="https://github.com/Thainge/portfolio/blob/gh-pages/static/media/2.dc80357cb51840c25f72.png?raw=true" width="500" />
 
 Official website for SimplyCyber LLC
 
